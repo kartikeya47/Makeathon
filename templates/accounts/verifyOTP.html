@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/verifyOTP.css' %}" />
+
+<form class="macbook-pro-16-2" method="POST">
+    {% csrf_token %}
+    <div class="container">
+        <div class="">
+            <input type="text" class="form-control" name="phone" value="{{ phone }}" required disabled>
+            <div class="enter-phone-number">Enter Phone Number</div>
+            <input type="number" class="form-control-1" name="otp" placeholder="Enter OTP Received" required>
+        </div>
+        <div class="group-div">
+            <div class="ellipse-parent">
+                <button type="submit" class="get-top">Get
+                    OTP</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+{% endblock content %}

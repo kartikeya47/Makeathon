@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/voicebot.css' %}" />
+
+
+<!-- mic image at center -->
+<div class="mic">
+  <a href="{% url 'inputSymptoms' %}">
+    <img src="{% static 'images/public/mic.png'%}" alt="mic" class="mic inactive" onclick="func()">
+    <img src="{% static 'images/public/MICactive.png'%}" alt="mic" class="mic active" style="display:none;">
+  </a>
+</div>
+<div class="gif">
+  <img src="{% static 'images/public/aZJ6Z.gif'%}" alt="gif" class="gif active" style="display: none;">
+</div>
+<div class="centertext">
+  <h1>CLICK HERE TO START SPEAKING</h1>
+</div>
+
+<script>
+  function func() {
+    document.getElementsByClassName("active").style.display = "flex";
+    document.getElementsByClassName("inactive").style.display = "none";
+  }
+</script>
+
+{% endblock content %}

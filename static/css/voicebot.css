@@ -1,0 +1,27 @@
+.centertext {
+  text-align: center;
+}
+
+.mic {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mic img {
+  height: 40vh;
+  width: 40vh;
+}
+
+.gif {
+  height: 60vh;
+  width: 60vh;
+  display: flex;
+  justify-content: center;
+  top: 175px;
+  left: 500px;
+  z-index: -1;
+  position: absolute;
+}

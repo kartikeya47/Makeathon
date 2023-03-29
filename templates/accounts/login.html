@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/login.css' %}" />
+
+<form class="macbook-pro-16-2" method="POST">
+    {% csrf_token %}
+    <div class="container">
+        <div class="">
+            <div class="enter-phone-number">Enter Phone Number</div>
+            <input type="text" class="form-control" name="phone" required>
+        </div>
+        <div class="group-div">
+            <div class="ellipse-parent">
+                <button type="submit" class="get-top">Get
+                    OTP</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    {% for message in messages %}
+    <h3>{{message}}</h3>
+    {% endfor %}
+</div>
+{% endblock content %}
